@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3002",
+    "prebuild": "cd ./packages/shared && npm install && npm run build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,7 +17,7 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.5",
-    "@utmessa/shared": "file:../../packages/shared",
+    "@utmessa/shared": "file:./packages/shared",
     "@vercel/postgres": "^0.10.0",
     "drizzle-orm": "^0.33.0",
     "nanoid": "^5.0.0",
