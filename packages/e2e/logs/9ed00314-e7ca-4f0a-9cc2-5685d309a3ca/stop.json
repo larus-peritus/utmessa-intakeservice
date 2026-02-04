@@ -1,0 +1,18 @@
+[
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/e2e",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/e2e",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  }
+]

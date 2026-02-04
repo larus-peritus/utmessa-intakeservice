@@ -1,0 +1,30 @@
+{
+  "name": "@utmessa/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "End-to-end integration tests for Utmessa platform",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "npx playwright test",
+    "test:ui:headed": "npx playwright test --headed",
+    "test:ui:debug": "npx playwright test --debug",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@utmessa/shared": "file:../shared",
+    "eventsource": "^2.0.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "@types/eventsource": "^1.1.15",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^6.3.4",
+    "typescript": "^5.3.3",
+    "vitest": "^1.6.0"
+  }
+}

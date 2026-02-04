@@ -1,0 +1,34 @@
+[
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/shared",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input",
+    "notification_type": "idle_prompt"
+  },
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/shared",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash",
+    "notification_type": "permission_prompt"
+  },
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/shared",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash",
+    "notification_type": "permission_prompt"
+  },
+  {
+    "session_id": "9ed00314-e7ca-4f0a-9cc2-5685d309a3ca",
+    "transcript_path": "/Users/larusperitus/.claude/projects/-Users-larusperitus-Documents-code-peritus-utmessa-project-manager/9ed00314-e7ca-4f0a-9cc2-5685d309a3ca.jsonl",
+    "cwd": "/Users/larusperitus/Documents/code/peritus/utmessa-project-manager/packages/shared",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash",
+    "notification_type": "permission_prompt"
+  }
+]
