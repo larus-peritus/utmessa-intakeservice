@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --peritus-blue: #2563eb;
+  --peritus-orange: #f97316;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scrolling for better mobile UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch-friendly tap highlights */
+@media (hover: none) {
+  button, a {
+    -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+  }
+}
