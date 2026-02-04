@@ -4,6 +4,7 @@ import type { SubmitIdeaRequest, SubmitIdeaResponse, QueueItem } from '@utmessa/
 import { createIdea } from '@/lib/db/ideas';
 import { generateToken } from '@/lib/utils/tokens';
 import { IDEA_STATUS } from '@/lib/db/types';
+import { sendStatusEmail } from '@/lib/email/email-service';
 import { validateOrchKey } from '@/lib/auth/validateOrchKey';
 import {
   validateListIdeasParams,
@@ -109,6 +110,18 @@ export async function POST(request: NextRequest) {
       email: data.email || null,
       status: IDEA_STATUS.SUBMITTED,
     });
+
+    // Send confirmation email if email was provided (async, don't await)
+    if (data.email) {
+      sendStatusEmail({
+        to: data.email,
+        ideaTitle: idea.title,
+        token: idea.token,
+        status: 'submitted',
+      }).catch((err) => {
+        console.error('[API] Email send error (non-blocking):', err);
+      });
+    }
 
     // Format response
     const response: SubmitIdeaResponse = {

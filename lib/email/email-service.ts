@@ -1,5 +1,6 @@
 import { resend, isEmailEnabled } from './resend-client';
 import {
+  submissionConfirmationEmail,
   buildingStartedEmail,
   waitingForInputEmail,
   completedEmail,
@@ -18,7 +19,11 @@ import {
  */
 
 // Email sender configuration
-const FROM_EMAIL = process.env.EMAIL_FROM || 'POC Smiður <noreply@utmessa.peritus.is>';
+// For Resend to work, you need to either:
+// 1. Verify your domain in Resend dashboard and use: 'Your Name <noreply@yourdomain.com>'
+// 2. Use Resend's test domain for testing: 'onboarding@resend.dev'
+// Set EMAIL_FROM environment variable to override
+const FROM_EMAIL = process.env.EMAIL_FROM || 'onboarding@resend.dev';
 
 export interface SendEmailOptions {
   to: string;
@@ -81,6 +86,10 @@ export async function sendStatusEmail(options: SendEmailOptions): Promise<SendEm
   let emailContent: { subject: string; html: string } | null = null;
 
   switch (status) {
+    case 'submitted':
+      emailContent = submissionConfirmationEmail(templateData);
+      break;
+
     case 'running':
       // Only send "building started" email when first transitioning to running
       emailContent = buildingStartedEmail(templateData);

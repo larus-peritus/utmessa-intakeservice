@@ -54,18 +54,9 @@ async function runMigrations() {
       console.log(`  → Running ${file}...`);
       
       try {
-        // Execute the migration SQL
-        // Split by semicolons and execute each statement
-        const statements = sqlContent
-          .split(';')
-          .map(s => s.trim())
-          .filter(s => s.length > 0 && !s.startsWith('--'));
-        
-        for (const statement of statements) {
-          if (statement.trim()) {
-            await sql.unsafe(statement);
-          }
-        }
+        // Execute the migration SQL as a single block
+        // postgres.js can handle multiple statements separated by semicolons
+        await sql.unsafe(sqlContent);
         
         console.log(`  ✓ Completed ${file}`);
       } catch (error) {

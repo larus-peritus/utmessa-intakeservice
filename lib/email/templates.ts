@@ -92,6 +92,39 @@ function emailButton(text: string, url: string, color: string = '#2563eb'): stri
 }
 
 /**
+ * Email: Submission confirmation
+ */
+export function submissionConfirmationEmail(data: EmailTemplateData): { subject: string; html: string } {
+  const content = `
+    <h2 style="margin: 0 0 16px; font-size: 20px; color: #1e293b;">
+      Takk fyrir að senda inn hugmynd!
+    </h2>
+    <p style="margin: 0 0 24px; font-size: 16px; color: #475569; line-height: 1.6;">
+      Við höfum móttekið hugmyndina þína og hún er nú í biðröð:
+    </p>
+    <div style="background-color: #f1f5f9; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
+      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #1e293b;">
+        "${escapeHtml(data.title)}"
+      </p>
+    </div>
+    <p style="margin: 0 0 24px; font-size: 16px; color: #475569; line-height: 1.6;">
+      Þú getur fylgst með stöðu hugmyndarinnar á kvittunarsíðunni þinni. Við munum senda þér tölvupóst þegar gervigreindin byrjar að vinna í hugmyndinni þinni.
+    </p>
+    <div style="text-align: center; margin-bottom: 24px;">
+      ${emailButton('Skoða kvittun', data.receiptUrl)}
+    </div>
+    <p style="margin: 0; font-size: 14px; color: #94a3b8;">
+      Vinsamlegast geymdu þessa kvittun til að geta fylgst með framvindu.
+    </p>
+  `;
+
+  return {
+    subject: `Hugmynd móttekin: ${escapeHtml(data.title)}`,
+    html: emailWrapper(content),
+  };
+}
+
+/**
  * Email: POC has started building
  */
 export function buildingStartedEmail(data: EmailTemplateData): { subject: string; html: string } {
