@@ -6,6 +6,7 @@
     "dev": "next dev -p 3002",
     "prebuild": "cd ./packages/shared && npm install --production=false && npm run build",
     "build": "next build",
+    "postbuild": "node scripts/run-migrations.mjs",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
