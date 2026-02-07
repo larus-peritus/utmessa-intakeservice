@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Logo from '@/components/Logo';
+import FloatingQR from '@/components/FloatingQR';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <FloatingQR />
       {/* Mobile-first container */}
       <div className="min-h-screen flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 lg:py-6 lg:min-h-0 lg:h-screen">
         <div className="w-full max-w-md lg:max-w-5xl mx-auto text-center">
@@ -25,12 +27,14 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-[3.625rem] font-extrabold text-slate-900 mb-3 lg:mb-[1.8rem] tracking-tight">
-            POC Gervigreindasmiður
+            GERVIGREINDARSMIÐUR
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl lg:text-[1.875rem] text-slate-600 mb-6 lg:mb-6 leading-relaxed max-w-2xl mx-auto">
-            Lýstu hugmyndinni þinni og sjáðu hvernig gervigreind smíðar prufuútgáfu af þinni hugmynd{' '}
+            Lýstu hugmyndinni þinni á{' '}
+            <span className="text-peritus-blue font-semibold">utmessa.peritus.is</span>{' '}
+            og sjáðu hvernig gervigreind smíðar prufuútgáfu af þinni hugmynd{' '}
             <span className="text-peritus-orange font-semibold">á nokkrum mínútum!</span>
           </p>
 
