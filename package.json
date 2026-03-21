@@ -23,7 +23,7 @@
     "@vercel/postgres": "^0.10.0",
     "drizzle-orm": "^0.33.0",
     "nanoid": "^5.0.0",
-    "next": "^15.1.0",
+    "next": "^15.5.14",
     "postgres": "^3.4.8",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
