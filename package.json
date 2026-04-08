@@ -21,7 +21,7 @@
     "@utmessa/shared": "file:./packages/shared",
     "@vercel/analytics": "^1.0.0",
     "@vercel/postgres": "^0.10.0",
-    "drizzle-orm": "^0.33.0",
+    "drizzle-orm": "^0.45.2",
     "nanoid": "^5.0.0",
     "next": "^15.1.0",
     "postgres": "^3.4.8",
